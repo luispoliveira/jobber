@@ -1,5 +1,6 @@
 import { PrismaClient } from '@generated/prisma-jobber-auth';
 import { Injectable, OnModuleDestroy, OnModuleInit } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { PrismaPg } from '@prisma/adapter-pg';
 
 @Injectable()
@@ -7,9 +8,9 @@ export class PrismaService
   extends PrismaClient
   implements OnModuleInit, OnModuleDestroy
 {
-  constructor() {
+  constructor(private readonly configService: ConfigService) {
     const adapter = new PrismaPg({
-      connectionString: process.env.AUTH_DATABASE_URL,
+      connectionString: configService.getOrThrow<string>('AUTH_DATABASE_URL'),
     });
     super({
       adapter,
