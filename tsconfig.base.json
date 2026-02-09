@@ -10,11 +10,24 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
-    "paths": {}
+    "paths": {
+      "@generated/prisma-jobber-auth": [
+        "generated/prisma-jobber-auth/client"
+      ],
+      "@generated/prisma-jobber-auth/*": [
+        "generated/prisma-jobber-auth/*"
+      ],
+    }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }
