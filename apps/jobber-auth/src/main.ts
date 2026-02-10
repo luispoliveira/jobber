@@ -18,7 +18,7 @@ async function bootstrap() {
     }),
   );
   app.setGlobalPrefix(globalPrefix);
-  const port = configService.getOrThrow<number>('AUTH_PORT');
+  const port = configService.getOrThrow<number>('PORT');
   await app.listen(port);
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`,
