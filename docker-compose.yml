@@ -9,3 +9,11 @@ services:
       POSTGRES_DB: jobber-auth
     volumes:
       - ./tmp/postgres:/var/lib/postgresql/data
+
+  pulsar:
+    image: apachepulsar/pulsar
+    command: >
+      /pulsar/bin/pulsar standalone
+    ports:
+      - 6650:6650
+      - 8080:8080
