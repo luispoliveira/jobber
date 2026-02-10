@@ -13,6 +13,7 @@ async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const configService = app.get(ConfigService);
   const globalPrefix = 'api';
+
   app.useGlobalPipes(
     new ValidationPipe({
       whitelist: true,
@@ -20,8 +21,10 @@ async function bootstrap() {
   );
   app.setGlobalPrefix(globalPrefix);
   app.use(cookieParser());
+
   const port = configService.getOrThrow<number>('PORT');
   await app.listen(port);
+
   Logger.log(
     `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`,
   );
