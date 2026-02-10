@@ -12,6 +12,11 @@ import { UsersModule } from './users/users.module';
     PrismaModule,
     GraphQLModule.forRoot<ApolloDriverConfig>({
       driver: ApolloDriver,
+      playground: {
+        settings: {
+          'request.credentials': 'include',
+        },
+      },
       context: ({ req, res }) => ({ req, res }),
       autoSchemaFile: true,
     }),
