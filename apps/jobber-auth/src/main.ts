@@ -6,6 +6,7 @@
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
+import cookieParser from 'cookie-parser';
 import { AppModule } from './app/app.module';
 
 async function bootstrap() {
@@ -18,6 +19,7 @@ async function bootstrap() {
     }),
   );
   app.setGlobalPrefix(globalPrefix);
+  app.use(cookieParser());
   const port = configService.getOrThrow<number>('PORT');
   await app.listen(port);
   Logger.log(
