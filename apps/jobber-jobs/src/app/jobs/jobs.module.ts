@@ -6,6 +6,7 @@ import { join } from 'node:path';
 import { FibonacciJob } from './fibonacci.job';
 import { JobsResolver } from './jobs.resolver';
 import { JobsService } from './jobs.service';
+
 @Module({
   imports: [
     DiscoveryModule,
