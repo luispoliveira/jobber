@@ -1,5 +1,5 @@
 import { Field, InputType } from '@nestjs/graphql';
-import { IsNotEmpty, IsObject } from 'class-validator';
+import { IsNotEmpty } from 'class-validator';
 import JSON from 'graphql-type-json';
 @InputType()
 export class ExecuteJobInput {
@@ -8,7 +8,6 @@ export class ExecuteJobInput {
   name: string;
 
   @Field(() => JSON)
-  @IsObject()
   @IsNotEmpty()
-  data: object;
+  data: object | object[];
 }
