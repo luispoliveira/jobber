@@ -1,9 +1,9 @@
+import { init } from '@jobber/nestjs';
 /**
  * This is not a production server yet!
  * This is only a minimal backend to get started.
  */
 import { AUTH_PACKAGE_NAME } from '@generated/proto-auth';
-import { init } from '@jobber/nestjs';
 import { NestFactory } from '@nestjs/core';
 import { GrpcOptions, Transport } from '@nestjs/microservices';
 import { join } from 'node:path';

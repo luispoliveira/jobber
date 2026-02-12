@@ -17,9 +17,11 @@
     "paths": {
       "@generated/prisma-auth": ["generated/prisma-auth/client"],
       "@generated/proto-auth": ["generated/proto/auth"],
-      "@generated/prisma-auth/*": ["generated/prisma-auth/*"],
+      "@jobber/graphql": ["libs/nestjs/src/index.ts"],
+      "@jobber/pulsar": ["libs/pulsar/src/index.ts"],
       "@jobber/nestjs": ["libs/nestjs/src/index.ts"],
-      "@jobber/pulsar": ["libs/pulsar/src/index.ts"]
+      "@jobber/grpc": ["libs/grpc/src/index.ts"],
+      "@jobber/prisma": ["libs/prisma/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
