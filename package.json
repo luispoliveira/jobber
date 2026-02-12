@@ -37,6 +37,7 @@
     "fibonacci": "^1.6.12",
     "graphql": "^16.12.0",
     "graphql-type-json": "^0.3.2",
+    "module-alias": "^2.3.4",
     "passport": "^0.7.0",
     "passport-jwt": "^4.0.1",
     "pg": "^8.18.0",
@@ -44,6 +45,13 @@
     "reflect-metadata": "^0.1.13",
     "rxjs": "^7.8.0",
     "ts-proto": "^2.11.2"
+  },
+  "_moduleAliases": {
+    "@jobber/grpc": "dist/libs/grpc/main.js",
+    "@jobber/nestjs": "dist/libs/nestjs/main.js",
+    "@jobber/graphql": "dist/libs/graphql/main.js",
+    "@jobber/prisma": "dist/libs/prisma/main.js",
+    "@jobber/pulsar": "dist/libs/pulsar/main.js"
   },
   "devDependencies": {
     "@eslint/js": "^9.8.0",
