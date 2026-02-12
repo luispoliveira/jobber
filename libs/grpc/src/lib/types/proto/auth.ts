@@ -21,11 +21,19 @@ export interface User {
 
 export const AUTH_PACKAGE_NAME = 'auth';
 
+/** AuthService provides authentication operations */
+
 export interface AuthServiceClient {
+  /** Authenticate verifies the provided token and returns the authenticated user */
+
   authenticate(request: AuthenticateRequest): Observable<User>;
 }
 
+/** AuthService provides authentication operations */
+
 export interface AuthServiceController {
+  /** Authenticate verifies the provided token and returns the authenticated user */
+
   authenticate(
     request: AuthenticateRequest,
   ): Promise<User> | Observable<User> | User;

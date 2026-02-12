@@ -1,5 +1,5 @@
+import { GqlContext } from '@jobber/graphql';
 import { Args, Context, Mutation, Resolver } from '@nestjs/graphql';
-import { GqlContext } from 'libs/graphql/src';
 import { User } from '../users/models/user.model';
 import { AuthService } from './auth.service';
 import { LoginInput } from './dto/login.input';
