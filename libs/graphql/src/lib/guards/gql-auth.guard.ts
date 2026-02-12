@@ -1,9 +1,4 @@
 import {
-  AUTH_PACKAGE_NAME,
-  AUTH_SERVICE_NAME,
-  AuthServiceClient,
-} from '@generated/proto-auth';
-import {
   CanActivate,
   ExecutionContext,
   Inject,
@@ -13,6 +8,7 @@ import {
 } from '@nestjs/common';
 import { GqlExecutionContext } from '@nestjs/graphql';
 import { ClientGrpc } from '@nestjs/microservices';
+import { AUTH_PACKAGE_NAME, AUTH_SERVICE_NAME, AuthServiceClient } from '@jobber/grpc';
 import { catchError, map, Observable, of } from 'rxjs';
 
 @Injectable()

@@ -1,10 +1,5 @@
-import {
-  AuthenticateRequest,
-  AuthServiceController,
-  AuthServiceControllerMethods,
-  User,
-} from '@generated/proto-auth';
 import { Controller, UseGuards } from '@nestjs/common';
+import { AuthenticateRequest, AuthServiceController, AuthServiceControllerMethods, User } from '@jobber/grpc';
 import { Observable } from 'rxjs';
 import { UsersService } from '../users/users.service';
 import { JwtAuthGuard } from './guards/jwt-auth.guard';

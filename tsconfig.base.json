@@ -16,7 +16,6 @@
     "baseUrl": ".",
     "paths": {
       "@generated/prisma-auth": ["generated/prisma-auth/client"],
-      "@generated/proto-auth": ["generated/proto/auth"],
       "@jobber/graphql": ["libs/nestjs/src/index.ts"],
       "@jobber/pulsar": ["libs/pulsar/src/index.ts"],
       "@jobber/nestjs": ["libs/nestjs/src/index.ts"],
