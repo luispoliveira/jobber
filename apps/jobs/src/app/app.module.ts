@@ -1,3 +1,4 @@
+import { LoggerModule } from '@jobber/nestjs';
 import { ApolloDriver, ApolloDriverConfig } from '@nestjs/apollo';
 import { Module } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
@@ -20,6 +21,7 @@ import { JobsModule } from './jobs.module';
       context: ({ req, res }) => ({ req, res }),
       autoSchemaFile: true,
     }),
+    LoggerModule,
   ],
 })
 export class AppModule {}

@@ -15,7 +15,6 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@generated/prisma-auth": ["generated/prisma-auth/client"],
       "@jobber/graphql": ["libs/graphql/src/index.ts"],
       "@jobber/pulsar": ["libs/pulsar/src/index.ts"],
       "@jobber/nestjs": ["libs/nestjs/src/index.ts"],
