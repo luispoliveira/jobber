@@ -1,0 +1,9 @@
+global:
+  imagePullPolicy: Always
+  imagePullSecrets:
+    - name: regcred
+jobs:
+  enabled: true
+  replicas: 1
+  image: '021490341635.dkr.ecr.eu-west-1.amazonaws.com/jobber/jobs:latest'
+  port: 3001
