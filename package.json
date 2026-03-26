@@ -11,7 +11,7 @@
   ],
   "private": true,
   "dependencies": {
-    "@apollo/server": "^5.4.0",
+    "@apollo/server": "^5.5.0",
     "@as-integrations/express5": "^1.1.2",
     "@golevelup/nestjs-discovery": "^6.1.2",
     "@grpc/grpc-js": "^1.14.3",
